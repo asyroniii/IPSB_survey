@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Instant Photo Strip Booth Survey Redirect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {font-family: sans-serif; text-align:center; margin-top:15%; color:#333;}
+  </style>
+</head>
+<body>
+  <h2>Redirecting to survey...</h2>
+  <p>If this page doesn’t change automatically, <a id="manualLink" href="#">click here</a>.</p>
+
+  <script>
+    // Replace these two URLs with your actual Google Form links
+    const formA = "https://forms.gle/YOUR_FORM_A_URL"; // $3 form
+    const formB = "https://forms.gle/YOUR_FORM_B_URL"; // $5 form
+
+    const chosen = Math.random() < 0.5 ? formA : formB;
+    document.getElementById("manualLink").href = chosen;
+    window.location.replace(chosen);
+  </script>
+</body>
+</html>
